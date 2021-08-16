@@ -5,6 +5,8 @@ services:
       context: ./app/api
       dockerfile: dockerfile.dev
     restart: unless-stopped
+    volumes:
+      - ./app/api/:/project
     stdin_open: true
     tty: true
     ports:
